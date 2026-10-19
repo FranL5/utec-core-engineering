@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-common_elements = __import__('common_elements').common_elements
+best_score = __import__('best_score').best_score
 
-set_1 = {"Python", "C", "Javascript"}
-set_2 = {"Bash", "Ruby", "Perl"}
-print(sorted(list(common_elements(set_1, set_2))))
+scores = {'John': 12, 'Bob': 14, 'Mike': 15, 'Molly': 16, 'Adam': 10}
+print(best_score(scores))
+print(best_score(None))
