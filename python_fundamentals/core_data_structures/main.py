@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
+best_score = __import__('best_score').best_score
 
-print_matrix_integer = __import__('print_matrix_integer').print_matrix_integer
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-print_matrix_integer(matrix)
+scores = {'John': 12, 'Bob': 14, 'Mike': 15, 'Molly': 16, 'Adam': 10}
+print(best_score(scores))
+print(best_score(None))
