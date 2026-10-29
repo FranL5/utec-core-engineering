@@ -6,4 +6,3 @@ class Square():
     """Representa un cuadrado geométrico."""
 
     pass
-    
