@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """Define la clase Square."""
 
@@ -9,7 +8,6 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """Inicializa el cuadrado."""
         self.size = size
-        self.__position = (0, 0)
         self.position = position
 
     @property
@@ -19,7 +17,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Valida y establece el tamaño."""
+        """Valida y establece el tamaño del cuadrado."""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
@@ -33,16 +31,16 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """Valida y establece la posición."""
+        """Valida y establece la posición del cuadrado."""
         if (type(value) is not tuple or len(value) != 2 or
                 any(type(n) is not int or n < 0 for n in value)):
             raise TypeError(
-                "position must be a tuple of 2 positive integer"
+                "position must be a tuple of 2 positive integers"
             )
         self.__position = value
 
     def area(self):
-        """Devuelve el área del cuadrado."""
+        """Calcula y devuelve el área del cuadrado."""
         return self.__size ** 2
 
     def my_print(self):
@@ -50,7 +48,7 @@ class Square:
         print(self)
 
     def __str__(self):
-        """Devuelve la representación del cuadrado como cadena."""
+        """Devuelve la representación del cuadrado como una cadena."""
         if self.__size == 0:
             return "\n" * self.__position[1]
 
