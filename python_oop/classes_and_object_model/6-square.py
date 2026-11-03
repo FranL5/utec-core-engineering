@@ -50,7 +50,7 @@ class Square:
     def __str__(self):
         """Devuelve la representación del cuadrado como una cadena."""
         if self.__size == 0:
-            return "\n" * self.__position[1]
+            return ""
 
         spaces = " " * self.__position[0]
         row = spaces + "#" * self.__size
